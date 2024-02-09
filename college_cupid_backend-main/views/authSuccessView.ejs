@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeCupid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background-color: #fffafc;
+            background-size: cover;
+            font-family: 'Montserrat';
+            color: #ff2c64;
+        }
+        .splash-text p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .splash-text div {
+            font-family: 'Sedgwick Ave', cursive;
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="splash-text">
+        <div>CollegeCupid</div>
+        <div style="height: 10px;"></div>
+        <% if(status==="ERROR"){ %> <p> Oops!! Something went wrong :( </p> <% } else {%> <p> Successfully signed in. </p><%}%>
+        <p id="status" hidden><%= status %></p>
+        <p id="outlookInfo" hidden><%= outlookInfo %></p>
+    </div>
+</body>
+
+</html>
